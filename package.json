@@ -1,0 +1,1 @@
+{"name":"rubik","private":true,"type":"module","scripts":{"check":"node --check dist/cube.js && node --check dist/vertex-colors.js && node --check dist/vendor/scene.js"}}

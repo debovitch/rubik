@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="description" content="Un Rubik’s Cube 3D interactif. Faites glisser une face pour tourner une tranche, ou le fond pour faire pivoter la vue.">
+    <title>Rubik — Canvas 3D</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Rubik’s Cube 3D</h1>
+      <section class="rc__canvas" aria-label="Rubik’s Cube interactif" aria-describedby="cube-instructions">
+        <div class="rc__canvas-mount"></div>
+        <canvas class="rc__canvas-overlay" aria-hidden="true"></canvas>
+        <div class="loading" role="status" aria-label="Chargement du cube"><span></span></div>
+        <p class="error" role="alert" hidden>Le rendu 3D n’est pas disponible dans ce navigateur. Activez WebGL ou essayez un autre navigateur.</p>
+      </section>
+      <p id="cube-instructions" class="sr-only">Faites glisser une face pour tourner une tranche. Faites glisser le fond pour faire pivoter la vue. Au clavier : les flèches orientent la vue, la touche Début la rétablit. U, R, F, D, L et B tournent les faces, avec Majuscule pour le sens inverse. Échap réinitialise le cube.</p>
+      <p class="sr-only" id="cube-status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="./cube.js"></script>
+  </body>
+</html>
